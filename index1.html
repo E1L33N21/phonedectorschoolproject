@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hall Monitor AI</title>
+
+    <!-- TensorFlow library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+
+    <!-- Teachable Machine library -->
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+    <h1>Hall Monitor AI</h1>
+
+    <!-- webcam appears here -->
+    <div id="webcam-container"></div>
+
+    <!-- predictions appear here -->
+    <div id="label-container"></div>
+    <div id="status">Status: idle</div>
+    <div id="photoContainer"></div>
+    <!-- your JavaScript -->
+    <script src="script1.js"></script>
+
+    <button onclick="warning.play()">Test Audio</button>
+    <button onclick="connectArduino()">Connect Arduino</button>
+</body>
+</html>
