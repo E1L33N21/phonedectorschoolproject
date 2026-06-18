@@ -48,19 +48,17 @@ function takeSnapshot() {
 
     statusBox.innerText = "📸 Taking picture...";
 
-    const video = document.querySelector("video");
-
-    if (!video || video.videoWidth === 0) {
-        console.log("Video not ready");
-        return;
-    }
-
     const canvas = document.createElement("canvas");
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
 
-    const ctx = canvas.getContext("2d");
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+canvas.width = webcam.canvas.width;
+canvas.height = webcam.canvas.height;
+
+const ctx = canvas.getContext("2d");
+
+
+ctx.drawImage(webcam.canvas, 0, 0);
+
+console.log("SNAPSHOT TRIGGERED");
 
     const image = canvas.toDataURL("image/png");
     let images = JSON.parse(localStorage.getItem("evidenceImages")) || [];
