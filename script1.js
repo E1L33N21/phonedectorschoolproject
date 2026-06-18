@@ -154,6 +154,7 @@ async function predict() {
 
                 if (!phoneInBox) {
                     console.log("VIOLATION → taking photos");
+                    console.log("ABOUT TO CALL takeSnapshot()");
                     statusBox.innerText = "VIOLATION DETECTED - Taking Photos...";
                     takeSnapshot();
                     setTimeout(takeSnapshot, 500);
